@@ -1,4 +1,4 @@
-# Analogous Pattern Detection using a Multi-Agent System
+# Analogous Pattern Learning in Multi-Agent Systems
 
 A multi-Agent System for Pattern Learning and Analogy Detection 
 
