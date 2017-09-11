@@ -1,8 +1,6 @@
 # Analogous Pattern Learning in Multi-Agent Systems
 
-Agents in a system ranging from very simple to very complex can effectively be used as a method of pattern recognition, which not only learns but also generalizes information from concrete examples in realtime.   
-
-An agent can range in functionality from that a simple function with no memory space to an intelligent actor that takes control of other agent’s behavior at will. Despite operational differences the agents each process information from the same source: a large graph that makes up their environment.
+Agents in a system, ranging from elementary to complex in function, can effectively be used as a method of pattern recognition, which not only learns but also generalizes information from concrete examples in realtime. Agents can be anything from a simple function with no memory to an intelligent automata who takes control of other agent’s behavior to achieve its own goals. Despite the operational variations, each agent processes information from the same source: a graph that makes up the system environment.
 
 The simplest form of agent has a position in the environment for which it can move by taking steps to neighboring nodes in the graph. It makes observations of the local neighborhood which are received as inputs and passed to higher-level agents who perform more complex operations on the data before sending it even higher in the system. The bottom-level outputs are value representing neighbors of the agents, to which each one takes a step and changes their position in the environment. 
 
