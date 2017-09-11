@@ -1,6 +1,8 @@
 # A Multi-Agent System for Analogy Detection
 
-Agents range from very simple to the very complex, operating as simple functions without memory space to intelligent actors that take control of other agent’s behavior at will. Despite the obvious difference in functionality, information processed by all agents originates from the same environment: A graph. Data flows into the system from the most simple agents moving around on the graph and passes all the way to the most complex, who make decisions and delegate tasks to lower levels. The bottom-level agents receive subgraphs of their local environments as input. Values submitted as output by each bottom-level agent represent neighboring nodes that they takes a step toward, changing their position on the graph by one.
+Agents range from very simple to the very complex, operating as simple functions without memory space to intelligent actors that take control of other agent’s behavior at will. Despite the obvious difference in functionality, information processed by all agents originates from the same environment: A graph. 
+
+Data flows into the system from the most simple agents moving around on the graph and passes all the way to the most complex, who make decisions and delegate tasks to lower levels. The bottom-level agents receive subgraphs of their local environments as input. Values submitted as output by each bottom-level agent represent neighboring nodes that they takes a step toward, changing their position on the graph by one.
 
 ***
 
