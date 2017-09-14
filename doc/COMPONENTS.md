@@ -1,4 +1,4 @@
-# Pre-Analogical Pattern Analysis 
+# Pre-Analogical Pattern Learning 
  
 ### Layers
 
