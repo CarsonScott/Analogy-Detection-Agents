@@ -11,7 +11,7 @@ class Layer:
 		self.outputs = []
 		self.weights = []
 		self.lrate = 0.0001
-		self.drate = 0.00001
+		self.drate = 0.0001
 	
 		for i in range(nodes):
 			self.totals.append(0)
@@ -42,4 +42,7 @@ class Layer:
 		for i in range(len(self.weights)):
 			for j in range(len(self.weights[i])):
 				dw = self.outputs[i]*self.inputs[i]*self.weights[i][j]/self.totals[i]
-				self.weights[i][j] + dw * self.drate
+				self.weights[i][j] += dw * self.drate
+
+				if abs(self.weights[i][j]):
+					self.weights[i][j] /= abs(self.weights[i][j])
