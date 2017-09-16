@@ -1,30 +1,40 @@
 from Layer import Layer
 from Factories import RandomLayer
 
-nodes = 3
-inputs = 9
+nodes = 5
+inputs = 10
 
 samples = [
-	[1, 1, 1, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 1, 1, 1, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 1, 1, 1]
+	[1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
 ]
 
 layer = RandomLayer(inputs, nodes, -50, 100)
 
-for i in range(100000):
-	winners = []
-	for s in samples:
-		output = layer.compute(s)
+log = open("log.txt", "w")
+for i in layer.weights:
+	for j in i:
+		log.write(str(j) + '	')
+	log.write('\n')
+log.close()
+last = ''
+this = ''
+for i in range(1000000):
+	winners = ''
+	for s in range(len(samples)):
+		output = layer.compute(samples[s])
 		layer.update()
 
-		w = 0
-		for i in range(len(output)):
-			if output[i] > output[w]: w = i
+		line = str(layer.best) + ')  '
 
-		winners.append(w)
-		if i % 10000: 
-			line =''
-			for j in range(len(output)):
-				line += str(round(output[j]*10000)/10000) + '	'
-			print(line + str(w) + "\n")
+		for k in range(len(output)):
+			line += str((output[k])) + ' '
+		this += line + '\n'
+	
+	if last != this:
+		print(str(i) + '\n' + this)
+	last = this
+	this = ''
