@@ -21,6 +21,7 @@ def RandomNetwork(inputs, layers, sizes):
 def RandomLayer(inputs, nodes, lower=0, upper=100):
 	d = Layer(inputs, nodes)
 	for i in range(nodes):
+		d.threshold[i] = 2	
 		for j in range(inputs):
 			d.weights[i][j] = rr(lower, upper)/100
 	return d
